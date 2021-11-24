@@ -1,0 +1,918 @@
+{
+  "source": "mockoon:1.16.0",
+  "data": [
+      {
+          "type": "environment",
+          "item": {
+              "uuid": "7f34f463-0883-40f0-a938-335b17eadcaa",
+              "lastMigration": 18,
+              "name": "CERC",
+              "endpointPrefix": "",
+              "latency": 0,
+              "port": 3000,
+              "routes": [
+                  {
+                      "uuid": "529667e6-af4f-43e0-9bb2-02a692c6d2aa",
+                      "documentation": "CercApi_GetContract_Async_Failed",
+                      "method": "post",
+                      "endpoint": "v15/contrato/consultar_failed",
+                      "responses": [
+                          {
+                              "uuid": "3a5dd11f-e877-48a0-b09f-a3d0ba5e8e37",
+                              "body": "{\r\n    \"status\": \"1\",\r\n    \"protocolo\": \"{{guid}}\",\r\n    \"dataHoraProcessamento\": \"2021-09-29T18:02:44.532Z\",\r\n    \"erros\": [\r\n        {\r\n            \"codigo\": \"000\",\r\n            \"mensagem\": \": CONTRATO COM FALHA.\"\r\n        }\r\n    ],\r\n    \"referenciaExterna\": \"{{body 'referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\"\r\n}",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer cercValidToken",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "a305a7a9-d7ea-4a67-a9cc-def4c9187e90",
+                      "documentation": "CercApi_CreateContract_RequestFailed",
+                      "method": "put",
+                      "endpoint": "contratos_dinamico_status_1",
+                      "responses": [
+                          {
+                              "uuid": "c7ae9e70-ef11-4aec-8218-47637ab0478f",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n        \"protocolo\": \"1cfafdfa-bdd1-531a-a471-62aa23c4d30d\",\r\n        \"dataHoraProcessamento\": \"2020-10-16T23:25:15\",\r\n        \"status\": \"1\",\r\n        \"erros\": [{\"codigo\":\"789\",\"mensagem\":\"dev test\"}],\r\n        \"quantidadeUnidadesRecebiveisAlcancadas\": 77,\r\n        \"valorUnidadesRecebiveisAlcancadas\": 0,\r\n        \"garantiasAlcancadas\": [\r\n            {\r\n                \"definicaoUnidadeRecebivel\": {\r\n                    \"listaCnpjCredenciadora\": [\r\n                        \"01027058000191\", \"16501555000157\"\r\n                    ],\r\n                    \"listaCodigoArranjoPagamento\": [\r\n                        \"ACC\", \"VCC\", \"VCD\", \"MCC\", \"MCD\", \"HCC\", \"ECC\", \"ECD\"\r\n                    ],\r\n                    \"dataInicio\": \"2020-10-16\",\r\n                    \"dataFim\": \"2022-10-16\",\r\n                    \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                    \"documentoTitular\": \"31725377000131\"\r\n                },\r\n                \"regrasDivisao\": \"2\",\r\n                \"valorAOnerar\": 50,\r\n                \"referenciaExterna\": \"${jsonPath request.body '$.referenciaExterna'}\",\r\n                \"unidadesRecebiveisAlcancadas\": [\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ECD\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 877.0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer cercValidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "9ce5df91-7496-4d8b-8b02-05e213e6fe21",
+                      "documentation": "CercApi_GetContract_Async_Failed",
+                      "method": "post",
+                      "endpoint": "v15/contrato/consultar_bad_request",
+                      "responses": [
+                          {
+                              "uuid": "f6c822b5-2bf6-49c0-9ea0-1f61c5e777c1",
+                              "body": "{\r\n    \"status\": \"1\",\r\n    \"protocolo\": \"a7591713-ff0a-4829-8509-10418173d3d2\",\r\n    \"dataHoraProcessamento\": \"2021-09-29T18:02:44.532Z\",\r\n    \"erros\": [\r\n        {\r\n            \"codigo\": \"999\",\r\n            \"mensagem\": \": Contrato inexistente.\"\r\n        }\r\n    ],\r\n    \"referenciaExterna\": \"{{body 'referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n}",
+                              "latency": 0,
+                              "statusCode": 400,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer cercValidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "29ad5c21-9cbe-4e19-b36d-43b5d6adc79e",
+                      "documentation": "CercApi_RemoveContractAsync_GivenAnValidParameters_ShouldReturnValidStatus",
+                      "method": "put",
+                      "endpoint": "/v15/contract_remove_async_response",
+                      "responses": [
+                          {
+                              "uuid": "c2b469df-d7c1-4bd7-a3c0-7cd87083d5e6",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n        \"protocolo\": \"9c69f1ab-0c6c-4e6b-98bc-9ade90b5c555\",\r\n        \"dataHoraProcessamento\": \"2021-05-31T21:33:51.940Z\",\r\n        \"status\": \"0\",\r\n        \"erros\": []\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "183366b8-de2f-42cc-97da-27e016654c33",
+                      "documentation": "CercApi_GetContract_Async_Dinamic",
+                      "method": "post",
+                      "endpoint": "v15/contrato/contratos_dinamico",
+                      "responses": [
+                          {
+                              "uuid": "2a35ba78-2838-42a6-a33f-c38055837566",
+                              "body": "{\r\n    \"referenciaExterna\": \"{{body 'referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n    \"identificadorContrato\": \"{{body 'identificadorContrato' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n    \"documentoContratante\": \"\",\r\n    \"repactuacao\": \"0\",\r\n    \"cnpjParticipante\": \"\",\r\n    \"cnpjDetentor\": \"\",\r\n    \"tipoEfeito\": \"1\",\r\n    \"domicilioPagamento\": {\r\n        \"numeroDocumentoTitular\": \"\",\r\n        \"tipoConta\": \"CC\",\r\n        \"ispb\": \"60701190\",\r\n        \"agencia\": \"\",\r\n        \"numeroConta\": \"\",\r\n        \"nomeTitular\": \"\",\r\n        \"compe\": \"ips\"\r\n    },\r\n    \"saldoDevedor\": 0.01,\r\n    \"limiteOperacaoGarantida\": 0.01,\r\n    \"valorMantido\": 0.01,\r\n    \"dataVencimento\": \"2021-04-22\",\r\n    \"identificacaoGestaoEntidadeRegistradora\": \"2\",\r\n    \"modalidadeOperacao\": \"1\",\r\n    \"garantiasAlcancadas\": [\r\n        {\r\n            \"definicaoUnidadeRecebivel\": {\r\n                \"listaCnpjCredenciadora\": [\r\n                    \"\"\r\n                ],\r\n                \"listaCodigoArranjoPagamento\": [\r\n                    \"ACC\"\r\n                ],\r\n                \"dataInicio\": \"2021-04-22\",\r\n                \"dataFim\": \"2021-04-22\",\r\n                \"documentoUsuarioFinalRecebedor\": \"\",\r\n                \"documentoTitular\": \"\"\r\n            },\r\n            \"regrasDivisao\": \"1\",\r\n            \"valorAOnerar\": -100000000,\r\n            \"referenciaExterna\": \"\",\r\n            \"unidadesRecebiveisAlcancadas\": [\r\n                {\r\n                    \"cnpjCredenciadora\": \"\",\r\n                    \"tipoDocumentoUsuarioFinalRecebedor\": \"1\",\r\n                    \"documentoUsuarioFinalRecebedor\": \"\",\r\n                    \"documentoTitular\": \"\",\r\n                    \"codigoArranjoPagamento\": \"ACC\",\r\n                    \"dataLiquidacao\": \"2021-04-22\",\r\n                    \"constituicao\": \"1\",\r\n                    \"valorConstituidoTotal\": 10000,\r\n                    \"valorBloqueado\": 10000,\r\n                    \"indicadorOneracao\": 1,\r\n                    \"regrasDivisao\": \"1\",\r\n                    \"valorOnerado\": 10000,\r\n                    \"valorConstituidoEfeito\": 0\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"quantidadeUnidadesRecebiveisAlcancadas\": 1,\r\n    \"valorUnidadesRecebiveisAlcancadas\": 10000,\r\n    \"resultadoDistribuicaoOnus\": \"0\",\r\n    \"carteira\": \"\",\r\n    \"indicadoresConsistencia\": [\r\n        {\r\n            \"indicador\": \"estabilidade_agenda\",\r\n            \"resultado\": \"Agenda estável para o usuário final recebedor\",\r\n            \"parametros\": [\r\n                {\r\n                    \"chave\": \"estabilidade\",\r\n                    \"valor\": \"estável\"\r\n                }\r\n            ],\r\n            \"criticidade\": \"0\"\r\n        }\r\n    ],\r\n    \"identificacaoContratoAnterior\": \"\",\r\n    \"parcelas\": [\r\n        {\r\n            \"vencimento\": \"2021-04-22\",\r\n            \"valor\": 0.01\r\n        }\r\n    ]\r\n}",
+                              "latency": 0,
+                              "statusCode": 200,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer cercValidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "51163a1f-5671-4e22-b990-ff60485f3b10",
+                      "documentation": "CercApi_GetContract_Async_NotFound",
+                      "method": "post",
+                      "endpoint": "v15/contrato/consultar_not_found",
+                      "responses": [
+                          {
+                              "uuid": "1766c77a-bec7-4cfd-be6f-7d562e4ba333",
+                              "body": "{\r\n    \"status\": \"1\",\r\n    \"protocolo\": \"{{guid}}\",\r\n    \"dataHoraProcessamento\": \"2021-09-29T18:02:44.532Z\",\r\n    \"erros\": [\r\n        {\r\n            \"codigo\": \"999\",\r\n            \"mensagem\": \": CONTRATO INEXISTENTE.\"\r\n        }\r\n    ],\r\n    \"referenciaExterna\": \"{{body 'referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\"\r\n}",
+                              "latency": 0,
+                              "statusCode": 404,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer cercValidToken",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "96f6530d-62fe-4acf-b769-0e3e7a66d964",
+                      "documentation": "CercApi_GetContract_Async",
+                      "method": "post",
+                      "endpoint": "v15/contrato/consultar",
+                      "responses": [
+                          {
+                              "uuid": "34bf0538-3208-4f90-beef-89a2315ce6f7",
+                              "body": "{\r\n    \"referenciaExterna\": \"{{body 'referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n    \"identificadorContrato\": \"{{body 'identificadorContrato' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n    \"documentoContratante\": \"06982437302\",\r\n    \"repactuacao\": \"0\",\r\n    \"cnpjParticipante\": \"34590184000109\",\r\n    \"cnpjDetentor\": \"31847367000179\",\r\n    \"tipoEfeito\": \"1\",\r\n    \"domicilioPagamento\": {\r\n        \"numeroDocumentoTitular\": \"06982437302\",\r\n        \"tipoConta\": \"PG\",\r\n        \"ispb\": \"16501555\",\r\n        \"agencia\": \"\",\r\n        \"numeroConta\": \"06091998\",\r\n        \"nomeTitular\": \"\",\r\n        \"compe\": \"197\"\r\n    },\r\n    \"saldoDevedor\": 57000,\r\n    \"limiteOperacaoGarantida\": 57000,\r\n    \"valorMantido\": 57000,\r\n    \"dataVencimento\": \"2022-04-22\",\r\n    \"identificacaoGestaoEntidadeRegistradora\": \"2\",\r\n    \"modalidadeOperacao\": \"2\",\r\n    \"garantiasAlcancadas\": [\r\n        {\r\n            \"referenciaExterna\": \"{{body 'referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n            \"definicaoUnidadeRecebivel\": {\r\n                \"listaCnpjCredenciadora\": [\r\n                    \"\"\r\n                ],\r\n                \"listaCodigoArranjoPagamento\": [\r\n                    \"ACC\"\r\n                ],\r\n                \"dataInicio\": \"2021-04-22\",\r\n                \"dataFim\": \"2021-04-22\",\r\n                \"documentoUsuarioFinalRecebedor\": \"\",\r\n                \"documentoTitular\": \"\"\r\n            },\r\n            \"regrasDivisao\": \"2\",\r\n            \"valorAOnerar\": \"80.0\",\r\n            \"unidadesRecebiveisAlcancadas\": [\r\n                {\r\n                    \"cnpjCredenciadora\": \"\",\r\n                    \"tipoDocumentoUsuarioFinalRecebedor\": \"1\",\r\n                    \"documentoUsuarioFinalRecebedor\": \"\",\r\n                    \"documentoTitular\": \"\",\r\n                    \"codigoArranjoPagamento\": \"ACC\",\r\n                    \"dataLiquidacao\": \"2021-04-22\",\r\n                    \"constituicao\": \"1\",\r\n                    \"valorConstituidoTotal\": 10000,\r\n                    \"valorBloqueado\": 10000,\r\n                    \"indicadorOneracao\": 1,\r\n                    \"regrasDivisao\": \"1\",\r\n                    \"valorOnerado\": 10000,\r\n                    \"valorConstituidoEfeito\": 0\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"quantidadeUnidadesRecebiveisAlcancadas\": 1,\r\n    \"valorUnidadesRecebiveisAlcancadas\": 10000,\r\n    \"resultadoDistribuicaoOnus\": \"0\",\r\n    \"carteira\": \"\",\r\n    \"indicadoresConsistencia\": [\r\n        {\r\n            \"indicador\": \"estabilidade_agenda\",\r\n            \"resultado\": \"Agenda estável para o usuário final recebedor\",\r\n            \"parametros\": [\r\n                {\r\n                    \"chave\": \"estabilidade\",\r\n                    \"valor\": \"estável\"\r\n                }\r\n            ],\r\n            \"criticidade\": \"0\"\r\n        }\r\n    ],\r\n    \"identificacaoContratoAnterior\": \"\",\r\n    \"parcelas\": [\r\n        {\r\n            \"vencimento\": \"2021-04-22\",\r\n            \"valor\": 0.01\r\n        }\r\n    ]\r\n}",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer cercValidToken",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "32eb1a7c-be06-4624-a0b0-18fe17cc059a",
+                      "documentation": "CercApi_UpdateContractAsync_contratos_dinamico",
+                      "method": "put",
+                      "endpoint": "v15/contratos_dinamico",
+                      "responses": [
+                          {
+                              "uuid": "820d085c-76c1-4ee8-83e0-0f2505a82557",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n        \"protocolo\": \"{{guid}}\",\r\n        \"dataHoraProcessamento\": \"{{now}}\",\r\n        \"status\": \"0\",\r\n        \"erros\": []\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer cercValidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "734368a8-aaf1-4b41-8972-7e8d72609382",
+                      "documentation": "CercApi_UpdateContractAsync_GivenAnValidParameters_ShouldReturnValidStatus",
+                      "method": "put",
+                      "endpoint": "v15/contract_update_async_response",
+                      "responses": [
+                          {
+                              "uuid": "35d39db3-b0e7-47f7-a1ed-1b68e7359fd1",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"{{body '0.garantias.0.referenciaExterna' '0.referenciaExterna' }}\",\r\n        \"protocolo\": \"9c69f1ab-0c6c-4e6b-98bc-9ade90b5c555\",\r\n        \"dataHoraProcessamento\": \"2021-05-31T21:33:51.940Z\",\r\n        \"status\": \"0\",\r\n        \"erros\": []\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer cercValidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "38d6e78b-5db3-417d-9455-7c6dd7109d8c",
+                      "documentation": "CercApi_HealthCheck_Returns200",
+                      "method": "get",
+                      "endpoint": "health_check",
+                      "responses": [
+                          {
+                              "uuid": "15cf4351-fdeb-418e-9134-46d6d39eb3ef",
+                              "body": "",
+                              "latency": 0,
+                              "statusCode": 200,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "6ab856ce-f2b5-4127-b1ce-c62e45d091c6",
+                      "documentation": "CercApi_UpdateContract_GivenAnValidParameters_ShouldReturnValidStatus",
+                      "method": "put",
+                      "endpoint": "contrato_update_response",
+                      "responses": [
+                          {
+                              "uuid": "47ba518d-0386-4879-94b3-4e562a3edd20",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n        \"protocolo\": \"9c69f1ab-0c6c-4e6b-98bc-9ade90b5c555\",\r\n        \"dataHoraProcessamento\": \"2021-05-31T21:33:51.940Z\",\r\n        \"status\": \"0\",\r\n        \"erros\": [],\r\n        \"quantidadeUnidadesRecebiveisAlcancadas\": 0,\r\n        \"valorUnidadesRecebiveisAlcancadas\": 0,\r\n        \"garantiasAlcancadas\": [\r\n            {\r\n                \"definicaoUnidadeRecebivel\": {\r\n                    \"listaCnpjCredenciadora\": [\r\n                        \"99T\"\r\n                    ],\r\n                    \"listaCodigoArranjoPagamento\": [\r\n                        \"ACC\"\r\n                    ],\r\n                    \"dataInicio\": \"2021-05-31\",\r\n                    \"dataFim\": \"2022-05-01\",\r\n                    \"documentoUsuarioFinalRecebedor\": \"12058134000142\",\r\n                    \"documentoTitular\": \"12058134000142\"\r\n                },\r\n                \"regrasDivisao\": \"2\",\r\n                \"valorAOnerar\": 0.8,\r\n                \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n                \"unidadesRecebiveisAlcancadas\": []\r\n            }\r\n        ]\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer cercValidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "61ddbbaa-2f7f-4567-8963-18ea56158f03",
+                      "documentation": "CercApi_GetContract_ContractNotFound_IntegrationTest",
+                      "method": "post",
+                      "endpoint": "contrato/consultar_inexistente",
+                      "responses": [
+                          {
+                              "uuid": "796a5f00-20d5-4808-9d9e-9aae38d7acef",
+                              "body": "{\r\n    \"status\": \"1\",\r\n    \"protocolo\": \"87dfb1fc-7e98-4ec0-a50f-e4bdef071a81\",\r\n    \"dataHoraProcessamento\": \"2021-05-24T13:24:27.522Z\",\r\n    \"erros\": [\r\n        {\r\n            \"codigo\": \"999\",\r\n            \"mensagem\": \": Contrato inexistente\"\r\n        }\r\n    ],\r\n    \"referenciaExterna\": \"{{body 'referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\"\r\n}",
+                              "latency": 0,
+                              "statusCode": 404,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "f6d96714-a6f3-4c07-b13f-6832b08894da",
+                      "documentation": "CercApi_GetContract_ContractNotFound",
+                      "method": "post",
+                      "endpoint": "contrato/consultar",
+                      "responses": [
+                          {
+                              "uuid": "96400981-4428-4519-9f60-bb0d34a5ac34",
+                              "body": "{\r\n    \"status\": \"1\",\r\n    \"protocolo\": \"87dfb1fc-7e98-4ec0-a50f-e4bdef071a81\",\r\n    \"dataHoraProcessamento\": \"2021-05-24T13:24:27.522Z\",\r\n    \"erros\": [\r\n        {\r\n            \"codigo\": \"999\",\r\n            \"mensagem\": \": Contrato inexistente\"\r\n        }\r\n    ],\r\n    \"referenciaExterna\": \"{{body 'referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\"\r\n}",
+                              "latency": 0,
+                              "statusCode": 404,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "e17c2117-2882-4d38-96d7-c06f90a3f06b",
+                      "documentation": "CercApi_AccessToken_WithDynamicToken_And_Unathorized",
+                      "method": "post",
+                      "endpoint": "oauth/token/2",
+                      "responses": [
+                          {
+                              "uuid": "a5916aa6-15e9-4a0d-9ed6-fdb073500cd6",
+                              "body": "{\r\n    \"access_token\": \"{{guid}}\",\r\n    \"token_type\": \"bearer\",\r\n    \"expires_in\": 43199,\r\n    \"scope\": \"resource-server-read resource-server-write\"\r\n}",
+                              "latency": 0,
+                              "statusCode": 202,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "37b34dc3-1fd0-45ec-a9e4-4def4ae1a380",
+                      "documentation": "CercApi_ContractRemovalRequest",
+                      "method": "put",
+                      "endpoint": "contrato_removal_response",
+                      "responses": [
+                          {
+                              "uuid": "a7a007fc-4dac-4eaa-8ce3-c1dbeeb05a7f",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n        \"protocolo\": \"2bafadas-bdd1-531a-a471-62aa23c4d30d\",\r\n        \"dataHoraProcessamento\": \"2020-10-16T23:25:15\",\r\n        \"status\": \"0\",\r\n        \"erros\": [],\r\n        \"quantidadeUnidadesRecebiveisAlcancadas\": 0,\r\n        \"valorUnidadesRecebiveisAlcancadas\": 0,\r\n        \"garantiasAlcancadas\": []\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer invalidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer cercValidToken",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "a7d32b16-bc6a-4f48-9281-982e4e3bdb05",
+                      "documentation": "CercApi_CreateContract_InternalServerError",
+                      "method": "put",
+                      "endpoint": "contratos_500",
+                      "responses": [
+                          {
+                              "uuid": "8b839e70-d36e-47c8-86bf-514a48ed08e4",
+                              "body": "",
+                              "latency": 0,
+                              "statusCode": 500,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer invalidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer cercValidToken",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "68bb38b2-04a3-473d-a17a-bff0be001071",
+                      "documentation": "CercApi_CreateContract_BadRequest",
+                      "method": "put",
+                      "endpoint": "contratos_400",
+                      "responses": [
+                          {
+                              "uuid": "d9845fa9-64d8-4813-88ed-eeb0f76d1db1",
+                              "body": "",
+                              "latency": 0,
+                              "statusCode": 400,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer invalidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer cercValidToken",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "727011a4-3503-4fe6-931b-4f9ad0dc60dd",
+                      "documentation": "CercApi_CreateContract_TestEndpoint",
+                      "method": "put",
+                      "endpoint": "contratos_test",
+                      "responses": [
+                          {
+                              "uuid": "ffcd0cfa-bdb0-460c-bbf3-d0773b7575b3",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"jq4wafexxeusej85xh281m4r1\",\r\n        \"protocolo\": \"1cfafdfa-bdd1-531a-a471-62aa23c4d30d\",\r\n        \"dataHoraProcessamento\": \"2020-10-16T23:25:15\",\r\n        \"status\": \"0\",\r\n        \"erros\": [],\r\n        \"quantidadeUnidadesRecebiveisAlcancadas\": 77,\r\n        \"valorUnidadesRecebiveisAlcancadas\": 0,\r\n        \"garantiasAlcancadas\": [\r\n            {\r\n                \"definicaoUnidadeRecebivel\": {\r\n                    \"listaCnpjCredenciadora\": [\r\n                        \"abc\"\r\n                    ],\r\n                    \"listaCodigoArranjoPagamento\": [\r\n                        \"ACC\"\r\n                    ],\r\n                    \"dataInicio\": \"2020-10-16\",\r\n                    \"dataFim\": \"2022-10-16\",\r\n                    \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                    \"documentoTitular\": \"31725377000131\"\r\n                },\r\n                \"regrasDivisao\": \"2\",\r\n                \"valorAOnerar\": 50,\r\n                \"referenciaExterna\": \"jq4wafexxeusej85xh281m4r1\",\r\n                \"unidadesRecebiveisAlcancadas\": [\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ACC\",\r\n                        \"dataLiquidacao\": \"2020-10-16\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ACC\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCC\",\r\n                        \"dataLiquidacao\": \"2020-10-18\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"MCC\",\r\n                        \"dataLiquidacao\": \"2020-10-19\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCC\",\r\n                        \"dataLiquidacao\": \"2020-10-20\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCC\",\r\n                        \"dataLiquidacao\": \"2020-10-21\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ACC\",\r\n                        \"dataLiquidacao\": \"2020-10-22\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer invalidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "809a4116-a3ef-4449-8f24-0c400ae62b4f",
+                      "documentation": "CercApi_CreateContract_GivenAnInvalidParameter_ShouldReturnAninvalidStatus",
+                      "method": "put",
+                      "endpoint": "contrato_response_invalid",
+                      "responses": [
+                          {
+                              "uuid": "11ab2833-440b-4539-bfcc-07e5bb242df2",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n        \"protocolo\": \"4c0d488e-d4e1-45ec-97fd-ff9367871c90\",\r\n        \"dataHoraProcessamento\": \"2021-05-31T21:46:46.025Z\",\r\n        \"status\": \"1\",\r\n        \"erros\": [\r\n            {\r\n                \"codigo\": \"107812\",\r\n                \"mensagem\": \"MODALIDADE DA OPERACAO INCOMPATIVEL COM O TIPO DE EFEITO\"\r\n            }\r\n        ]\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer invalidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "dc079edc-bfbc-4361-9d29-46b815f8f506",
+                      "documentation": "CercApi_CreateContract_UsingDataFromRequest",
+                      "method": "put",
+                      "endpoint": "contratos_dinamico",
+                      "responses": [
+                          {
+                              "uuid": "ba529a97-31d1-42f7-bc0e-e97b9b545404",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n        \"protocolo\": \"7cfafdfa-bdd1-571a-a471-62aa27-created\",\r\n        \"dataHoraProcessamento\": \"2020-10-16T23:25:15\",\r\n        \"status\": \"0\",\r\n        \"erros\": [],\r\n        \"quantidadeUnidadesRecebiveisAlcancadas\": 77,\r\n        \"valorUnidadesRecebiveisAlcancadas\": 0,\r\n        \"garantiasAlcancadas\": [\r\n            {\r\n                \"definicaoUnidadeRecebivel\": {\r\n                    \"listaCnpjCredenciadora\": [\r\n                        \"01027058000191\", \"16501555000157\"\r\n                    ],\r\n                    \"listaCodigoArranjoPagamento\": [\r\n                        \"ACC\", \"VCC\", \"VCD\", \"MCC\", \"MCD\", \"HCC\", \"ECC\", \"ECD\"\r\n                    ],\r\n                    \"dataInicio\": \"2020-10-16\",\r\n                    \"dataFim\": \"2022-10-16\",\r\n                    \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                    \"documentoTitular\": \"31725377000131\"\r\n                },\r\n                \"regrasDivisao\": \"2\",\r\n                \"valorAOnerar\": 50,\r\n                \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n                \"unidadesRecebiveisAlcancadas\": [\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ACC\",\r\n                        \"dataLiquidacao\": \"2020-10-18\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ACC\",\r\n                        \"dataLiquidacao\": \"2020-10-18\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"16501555000157\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ACC\",\r\n                        \"dataLiquidacao\": \"2020-10-18\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCC\",\r\n                        \"dataLiquidacao\": \"2020-10-18\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"4\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCC\",\r\n                        \"dataLiquidacao\": \"2020-10-18\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCD\",\r\n                        \"dataLiquidacao\": \"2020-10-19\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCD\",\r\n                        \"dataLiquidacao\": \"2020-10-20\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"MCC\",\r\n                        \"dataLiquidacao\": \"2020-10-21\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"MCC\",\r\n                        \"dataLiquidacao\": \"2020-10-22\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"MCD\",\r\n                        \"dataLiquidacao\": \"2020-10-22\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"MCD\",\r\n                        \"dataLiquidacao\": \"2020-10-23\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"HCC\",\r\n                        \"dataLiquidacao\": \"2020-10-22\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"HCC\",\r\n                        \"dataLiquidacao\": \"2020-10-16\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 123.0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ECC\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 877.0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ECC\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 877.0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"16501555000157\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ECD\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 877.0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ECD\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 877.0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"01027058000191\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ECD\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 877.0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer cercValidToken",
+                                      "operator": "equals"
+                                  },
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "(Operacao\":\"C)",
+                                      "operator": "regex"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "AND",
+                              "fallbackTo404": false
+                          },
+                          {
+                              "uuid": "0beabc2d-f606-4330-bece-7c586ed8ae9e",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n        \"protocolo\": \"1cfafdfa-bdd1-531a-a471-62a-updated\",\r\n        \"dataHoraProcessamento\": \"2020-10-16T23:25:15\",\r\n        \"status\": \"0\",\r\n        \"erros\": [],\r\n        \"quantidadeUnidadesRecebiveisAlcancadas\": 77,\r\n        \"valorUnidadesRecebiveisAlcancadas\": 0,\r\n        \"garantiasAlcancadas\": [\r\n            {\r\n                \"definicaoUnidadeRecebivel\": {\r\n                    \"listaCnpjCredenciadora\": [\r\n                        \"abc\"\r\n                    ],\r\n                    \"listaCodigoArranjoPagamento\": [\r\n                        \"ACC\"\r\n                    ],\r\n                    \"dataInicio\": \"2020-10-16\",\r\n                    \"dataFim\": \"2022-10-16\",\r\n                    \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                    \"documentoTitular\": \"31725377000131\"\r\n                },\r\n                \"regrasDivisao\": \"2\",\r\n                \"valorAOnerar\": 50,\r\n                \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n                \"unidadesRecebiveisAlcancadas\": [\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ACC\",\r\n                        \"dataLiquidacao\": \"2020-10-18\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ACC\",\r\n                        \"dataLiquidacao\": \"2020-10-18\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCC\",\r\n                        \"dataLiquidacao\": \"2020-10-18\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCC\",\r\n                        \"dataLiquidacao\": \"2020-10-18\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCD\",\r\n                        \"dataLiquidacao\": \"2020-10-19\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCD\",\r\n                        \"dataLiquidacao\": \"2020-10-20\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"MCC\",\r\n                        \"dataLiquidacao\": \"2020-10-21\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"MCC\",\r\n                        \"dataLiquidacao\": \"2020-10-22\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"def\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"MCD\",\r\n                        \"dataLiquidacao\": \"2020-10-22\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"def\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"MCD\",\r\n                        \"dataLiquidacao\": \"2020-10-23\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"def\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"HCC\",\r\n                        \"dataLiquidacao\": \"2020-10-22\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"HCC\",\r\n                        \"dataLiquidacao\": \"2020-10-16\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 123.0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ECC\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 877.0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ECC\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 877.0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ECD\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 877.0,\r\n                        \"indicadorOneracao\": \"2\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ECD\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 877.0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer cercValidToken",
+                                      "operator": "equals"
+                                  },
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "(tipoOperacao\": \"A)",
+                                      "operator": "regex"
+                                  }
+                              ],
+                              "rulesOperator": "AND",
+                              "disableTemplating": false,
+                              "fallbackTo404": false
+                          },
+                          {
+                              "uuid": "dcd8b57a-0a11-463f-911f-b77f77df2029",
+                              "body": "{\"error\":\"unauthorized\",\"error_description\":\"Full authentication is required to access this resource\"}",
+                              "latency": 0,
+                              "statusCode": 401,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer invalidToken",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "rulesOperator": "OR",
+                              "disableTemplating": false,
+                              "fallbackTo404": false
+                          },
+                          {
+                              "uuid": "f1ad6e78-9749-42d3-8fe0-3435605c85a7",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n        \"protocolo\": \"2bafadas-bdd1-531a-a471-2f5d-removed\",\r\n        \"dataHoraProcessamento\": \"2020-10-16T23:25:15\",\r\n        \"status\": \"0\",\r\n        \"erros\": [],\r\n        \"quantidadeUnidadesRecebiveisAlcancadas\": 0,\r\n        \"valorUnidadesRecebiveisAlcancadas\": 0,\r\n        \"garantiasAlcancadas\": []\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer cercValidToken",
+                                      "operator": "equals"
+                                  },
+                                  {
+                                      "target": "body",
+                                      "modifier": "",
+                                      "value": "(Operacao\": \"B\\b)",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "rulesOperator": "AND",
+                              "disableTemplating": false,
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "950ed848-d51c-43a7-9b23-470f2bd871b6",
+                      "documentation": "CercApi_CreateContract_UsingDataFromRequest",
+                      "method": "post",
+                      "endpoint": "oauth/token",
+                      "responses": [
+                          {
+                              "uuid": "8e753e80-4501-48f0-8a5e-5ca9fc373779",
+                              "body": "{\r\n    \"access_token\": \"cercValidToken\",\r\n    \"token_type\": \"bearer\",\r\n    \"expires_in\": 43199,\r\n    \"scope\": \"resource-server-read resource-server-write\"\r\n}",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "",
+                                      "value": ""
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer cercValidToken",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          },
+                          {
+                              "uuid": "0ed81ec8-312a-4db7-a24c-dcfb7fadb96a",
+                              "body": "{\"error\":\"unauthorized\",\"error_description\":\"Full authentication is required to access this resource\"}",
+                              "latency": 0,
+                              "statusCode": 401,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "Authorization",
+                                      "value": "Bearer invalidToken"
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Basic MDQwMDAxMDQwMDAxMDA6MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDAwMDAwMDAw",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          },
+                          {
+                              "uuid": "e53e9a49-8cda-4598-a026-f51bad7ea37b",
+                              "body": "{}",
+                              "latency": 0,
+                              "statusCode": 200,
+                              "label": "",
+                              "headers": [
+                                  {
+                                      "key": "",
+                                      "value": ""
+                                  }
+                              ],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  },
+                  {
+                      "uuid": "ec21e2b6-48fb-4430-81b3-c81ea3a5a9e4",
+                      "documentation": "CercApi_CreateContract",
+                      "method": "put",
+                      "endpoint": "contratos",
+                      "responses": [
+                          {
+                              "uuid": "33e82587-0b06-4b79-9789-0c092a9648ac",
+                              "body": "[\r\n    {\r\n        \"referenciaExterna\": \"{{body '0.referenciaExterna' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n        \"protocolo\": \"1cfafdfa-bdd1-531a-a471-62aa23c4d30d\",\r\n        \"dataHoraProcessamento\": \"2020-10-16T23:25:15\",\r\n        \"status\": \"0\",\r\n        \"erros\": [],\r\n        \"quantidadeUnidadesRecebiveisAlcancadas\": 77,\r\n        \"valorUnidadesRecebiveisAlcancadas\": 0,\r\n        \"garantiasAlcancadas\": [\r\n            {\r\n                \"definicaoUnidadeRecebivel\": {\r\n                    \"listaCnpjCredenciadora\": [\r\n                        \"abc\"\r\n                    ],\r\n                    \"listaCodigoArranjoPagamento\": [\r\n                        \"ACC\"\r\n                    ],\r\n                    \"dataInicio\": \"2020-10-16\",\r\n                    \"dataFim\": \"2022-10-16\",\r\n                    \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                    \"documentoTitular\": \"31725377000131\"\r\n                },\r\n                \"regrasDivisao\": \"2\",\r\n                \"valorAOnerar\": 50,\r\n                \"referenciaExterna\": \"{{body 'identificadorContrato' 'e4001a94-83f4-4ebc-8deb-9c7fc5c71107'}}\",\r\n                \"unidadesRecebiveisAlcancadas\": [\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ACC\",\r\n                        \"dataLiquidacao\": \"2020-10-16\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ACC\",\r\n                        \"dataLiquidacao\": \"2020-10-17\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCC\",\r\n                        \"dataLiquidacao\": \"2020-10-18\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"MCC\",\r\n                        \"dataLiquidacao\": \"2020-10-19\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCC\",\r\n                        \"dataLiquidacao\": \"2020-10-20\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"VCC\",\r\n                        \"dataLiquidacao\": \"2020-10-21\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    },\r\n                    {\r\n                        \"cnpjCredenciadora\": \"abc\",\r\n                        \"tipoDocumentoUsuarioFinalRecebedor\": \"2\",\r\n                        \"documentoUsuarioFinalRecebedor\": \"31725377000131\",\r\n                        \"documentoTitular\": \"31725377000131\",\r\n                        \"codigoArranjoPagamento\": \"ACC\",\r\n                        \"dataLiquidacao\": \"2020-10-22\",\r\n                        \"constituicao\": \"2\",\r\n                        \"valorConstituidoTotal\": 0,\r\n                        \"valorBloqueado\": 0,\r\n                        \"indicadorOneracao\": \"1\",\r\n                        \"regrasDivisao\": \"2\",\r\n                        \"valorOnerado\": 50\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n]",
+                              "latency": 0,
+                              "statusCode": 207,
+                              "label": "",
+                              "headers": [],
+                              "filePath": "",
+                              "sendFileAsBody": false,
+                              "rules": [
+                                  {
+                                      "target": "header",
+                                      "modifier": "Authorization",
+                                      "value": "Bearer cercValidToken",
+                                      "operator": "equals"
+                                  }
+                              ],
+                              "disableTemplating": false,
+                              "rulesOperator": "OR",
+                              "fallbackTo404": false
+                          }
+                      ],
+                      "enabled": true,
+                      "randomResponse": false,
+                      "sequentialResponse": false
+                  }
+              ],
+              "proxyMode": false,
+              "proxyHost": "",
+              "https": false,
+              "cors": true,
+              "headers": [
+                  {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                  }
+              ],
+              "proxyReqHeaders": [
+                  {
+                      "key": "",
+                      "value": ""
+                  }
+              ],
+              "proxyResHeaders": [
+                  {
+                      "key": "",
+                      "value": ""
+                  }
+              ],
+              "proxyRemovePrefix": false,
+              "hostname": "0.0.0.0"
+          }
+      }
+  ]
+}
